@@ -58,22 +58,22 @@ export default function HomeBanner() {
       />
 
       {/* Content area: two columns, left content and empty right */}
-      <div className="relative z-10 mx-auto grid min-h-[600px] w-full max-w-[1440px] grid-cols-1 items-center px-8 pb-16 pt-20 sm:min-h-[650px] lg:min-h-[800px] lg:grid-cols-2 lg:px-16 lg:pb-10 lg:pt-28 xl:px-[72px]">
+      <div className="relative z-10 mx-auto grid min-h-[600px] w-full max-w-[1440px] grid-cols-1 items-center px-8 pb-16 pt-20 sm:min-h-[650px] lg:min-h-[800px] lg:grid-cols-12 lg:px-16 lg:pb-10 lg:pt-28 xl:px-[72px]">
 
         {/* Left column */}
         <div
           key={activeIndex}
-          className="w-full min-w-0 max-w-[570px] animate-[fadeIn_500ms_ease-in-out]"
+          className="w-full min-w-0 max-w-[570px] animate-[fadeIn_500ms_ease-in-out] lg:col-span-7"
         >
           <p className="mb-4 text-[10px] font-medium tracking-wide text-[#302f29] sm:text-sm">
             {activeSlide.smallTitle}
           </p>
 
-          <h1 className="font-heading text-[clamp(2.25rem,5vw,4rem)] font-semibold leading-tight text-[#77895D]">
+          <h1 className="font-heading text-[clamp(2.25rem,5vw,5.2rem)] font-semibold leading-tight text-[#77895D]">
             {activeSlide.title}
           </h1>
 
-          <p className="mt-2 break-words font-highlight text-[clamp(2rem,5vw,5.2rem)] leading-tight text-[#815c42]">
+          <p className="mt-2 break-words font-highlight text-[clamp(2rem,5vw,6.2rem)] leading-tight text-[#815c42]">
             {activeSlide.scriptTitle}
           </p>
 
@@ -98,7 +98,7 @@ export default function HomeBanner() {
         </div>
 
         {/* Right column intentionally empty */}
-        <div aria-hidden="true" className="hidden lg:block" />
+        <div aria-hidden="true" className="hidden lg:block lg:col-span-5" />
       </div>
 
       {/* Previous button */}
