@@ -33,7 +33,7 @@ const isActive = (href) => pathname === href;
         <nav className="relative mx-auto flex h-[60px] max-w-[1440px] items-center justify-between rounded-full bg-transparent lg:bg-white px-5 md:shadow-sm sm:h-[73px] sm:pl-[34px] sm:pr-[14px]">
 
           {/* Desktop left navigation */}
-          <div className="items-center  lg:flex gap-5 xl:gap-[46px]">
+          <div className="items-center hidden lg:flex gap-5 xl:gap-[46px]">
             {leftLinks.map((link, index) => (
               <Link
   key={link.name}
@@ -61,7 +61,7 @@ const isActive = (href) => pathname === href;
             </a>
           </div>
           {/* Desktop right navigation */}
-          <div className=" items-center lg:flex gap-5 xl:gap-[46px]">
+          <div className=" items-center hidden lg:flex gap-5 xl:gap-[46px]">
             {rightLinks.map((link) => (
                <Link
   key={link.name}
