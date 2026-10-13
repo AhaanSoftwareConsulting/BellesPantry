@@ -83,7 +83,7 @@ export default function HomeBanner() {
 
           <a
             href={activeSlide.buttonLink}
-            className="group mt-6 inline-flex max-w-fit items-center gap-3 rounded-full bg-[#77895D] py-2 md:py-2.5 pl-4 pr-2.5 font-inter text-[10px] font-medium uppercase text-white transition-colors duration-300 hover:bg-[#5E432D] sm:gap-4 sm:pl-5 sm:text-sm"
+            className="group mt-6 inline-flex max-w-fit items-center gap-3 rounded-full bg-[#77895D] py-2 md:py-2.5 pl-4 pr-2.5 font-inter text-[10px] font-medium uppercase text-white  sm:gap-4 sm:pl-5 sm:text-sm transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#5E432D] hover:shadow-[0_10px_24px_rgba(0,0,0,0.25)]"
           >
             <span>{activeSlide.buttonText}</span>
 
@@ -91,7 +91,7 @@ export default function HomeBanner() {
               <ArrowUpRightIcon
                 size={16}
                 weight="bold"
-                className="transition-transform duration-300 group-hover:rotate-90"
+                  className="transition-transform duration-300 group-hover:rotate-180"
               />
             </span>
           </a>
