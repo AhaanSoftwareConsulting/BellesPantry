@@ -30,7 +30,7 @@ const isActive = (href) => pathname === href;
     <>
       {/* Header positioned over the hero banner */}
       <header className="absolute left-0 right-0 top-24 z-50 px-4 sm:px-8 lg:px-12 xl:px-[70px] ">
-        <nav className="relative mx-auto flex h-[60px] max-w-[1440px] items-center justify-between rounded-full bg-transparent lg:bg-white px-5 md:shadow-sm sm:h-[73px] sm:pl-[34px] sm:pr-[14px]">
+        <nav className="relative mx-auto flex h-[60px] max-w-[1440px] items-center justify-between rounded-full bg-transparent lg:bg-white px-5 lg:shadow-sm sm:h-[73px] sm:pl-[34px] sm:pr-[14px]">
 
           {/* Desktop left navigation */}
           <div className="items-center hidden lg:flex gap-5 xl:gap-[46px]">
