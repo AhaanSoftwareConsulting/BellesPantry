@@ -39,10 +39,10 @@ const quickLinks = [
 ];
 
 const exploreLinks = [
-  { label: "Pantry Favorites", href: "/pantry-favorites" },
-  { label: "Gift Collections", href: "/gift-collections" },
-  { label: "Food & Ingredients", href: "/food-ingredients" },
-  { label: "Southern Lifestyle", href: "/southern-lifestyle" },
+  { label: "Pantry Favorites", href: "/product" },
+  { label: "Gift Collections", href: "/product" },
+  { label: "Food & Ingredients", href: "/product" },
+  { label: "Southern Lifestyle", href: "/product" },
 ];
 
 /* Social icons (Phosphor). Color is inherited from the link (currentColor),
