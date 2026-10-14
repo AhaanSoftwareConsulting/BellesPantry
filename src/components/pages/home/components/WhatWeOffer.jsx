@@ -10,7 +10,7 @@ const offers = [
     description:
       "Stock your pantry for everyday use and effortless entertaining",
     buttonText: "SHOP ALL",
-    link: "/shop",
+    link:"/product",
   },
   {
     image: grid2,
@@ -18,7 +18,7 @@ const offers = [
     description:
       "Thoughtfully curated gourmet gifts for every occasion",
     buttonText: "GIFTS",
-    link: "/gifts",
+    link: "/product",
   },
   {
     image: grid3,
@@ -26,7 +26,7 @@ const offers = [
     description:
       "Quick and easy recipes destined to be your new family favorites",
     buttonText: "RECIPES",
-    link: "/recipes",
+    link: "/product",
   },
 ];
 
@@ -68,7 +68,7 @@ export default function WhatWeOffer() {
               {/* Button */}
               <a
                 href={offer.link}
-                className="group mt-6 inline-flex max-w-fit items-center gap-3 rounded-full bg-[#77895D] py-2 md:py-2.5 pl-4 pr-2.5 font-inter text-[10px] font-medium uppercase text-white  sm:gap-4 sm:pl-5 sm:text-sm transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#5E432D] hover:shadow-[0_10px_24px_rgba(0,0,0,0.25)]"
+                className="group mt-6 inline-flex max-w-fit items-center gap-3 rounded-full bg-[#77895D] py-2 md:py-2.5 pl-4 pr-2.5 font-inter text-[10px] font-medium uppercase text-white  sm:gap-4 sm:pl-5 sm:text-sm transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#5E432D] hover:shadow-[0_10px_24px_rgba(0,0,0,0.25)] cursor-pointer"
               >
                 {offer.buttonText}
 
