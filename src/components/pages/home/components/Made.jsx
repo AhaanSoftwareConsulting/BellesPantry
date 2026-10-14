@@ -31,7 +31,7 @@ const Made = () => {
 
             {/* Button */}
             <a
-              href="#"
+              href="/services"
               className="group mt-[24px] inline-flex w-fit items-center gap-[16px] rounded-full bg-[#76563B] py-[10px] pl-[28px] pr-[10px] font-inter text-[14px] font-medium uppercase text-white transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#5E432D] hover:shadow-[0_10px_24px_rgba(0,0,0,0.25)]"
             >
               <span className="text-center">Explore Recipes</span>
