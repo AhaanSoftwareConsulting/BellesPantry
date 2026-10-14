@@ -4,6 +4,7 @@ import WhatWeOffer from '../home/components/WhatWeOffer'
 import Whychooseus from '../home/components/Whychooseus'
 import Faq from '../faq/components/Faq'
 import Cta from '../home/components/Cta'
+import ProductBelles from '../home/components/ProductBelles'
 
 const ServiceComponents = () => {
   return (
@@ -11,6 +12,7 @@ const ServiceComponents = () => {
       <ServiceBanner/>
       <WhatWeOffer/>
       <Whychooseus/>
+      <ProductBelles/>
       <Faq/>
       <Cta/>
     </div>

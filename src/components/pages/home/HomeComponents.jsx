@@ -6,6 +6,7 @@ import Made from './components/Made'
 import Faq from '../faq/components/Faq'
 import Cta from './components/Cta'
 import OurStory from './components/OurStory'
+import ProductBelles from './components/ProductBelles'
 
 const HomeComponents = () => {
   return (
@@ -14,6 +15,7 @@ const HomeComponents = () => {
       <WhatWeOffer/>
       <OurStory/>
       <Whychooseus/>
+      <ProductBelles/>
       <Made/>
       <Faq/>
       <Cta/>
