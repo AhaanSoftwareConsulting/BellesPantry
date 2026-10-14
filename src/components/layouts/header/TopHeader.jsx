@@ -14,7 +14,7 @@ const TopHeader = () => {
           aria-label="Facebook"
           className="bg-white rounded-full p-1 text-black transition-colors duration-300 hover:scale-105"
         >
-          <FacebookLogoIcon size={16} strokeWidth={1.7} />
+          <FacebookLogoIcon size={16} strokeWidth={1.7} weight="fill" color="#292821"/>
         </a>
 
         <a
@@ -22,15 +22,15 @@ const TopHeader = () => {
           aria-label="Instagram"
           className="bg-white rounded-full p-1 text-black transition-colors duration-300 hover:scale-105"
         >
-          <InstagramLogoIcon size={16} strokeWidth={1.7} />
+          <InstagramLogoIcon size={16} strokeWidth={1.7} color="#292821"/>
         </a>
 
         <a
-          href="https://youtube.com"
+          href="https://linkedin.com"
           aria-label="YouTube"
           className="bg-white rounded-full p-1 text-black transition-colors duration-300 hover:scale-105"
         >
-          <LinkedinLogoIcon size={17} strokeWidth={1.7} />
+          <LinkedinLogoIcon size={17} strokeWidth={1.7} weight="fill" color="#292821"/>
         </a>
       </div>
 

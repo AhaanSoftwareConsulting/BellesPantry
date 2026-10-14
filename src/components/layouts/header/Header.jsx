@@ -11,7 +11,7 @@ const leftLinks = [
 ];
 
 const rightLinks = [
-  { name: "SHOP NOW", href: "/shop" },
+  { name: "SHOP NOW", href: "/product" },
   { name: "FAQ", href: "/faq" },
 ];
 
@@ -102,9 +102,9 @@ const isActive = (href) => pathname === href;
             aria-controls="mobile-menu"
             className="ml-auto flex h-10 w-10 flex-col items-center justify-center gap-[5px] rounded-full hover:bg-[#f5f4ef] lg:hidden"
           >
-            <span className="h-px w-5 bg-[#414b32]" />
-            <span className="h-px w-5 bg-[#414b32]" />
-            <span className="h-px w-5 bg-[#414b32]" />
+            <span className="h-px w-5 bg-[#77895D]" />
+            <span className="h-px w-5 bg-[#77895D]" />
+            <span className="h-px w-5 bg-[#77895D]" />
           </button>
         </nav>
       </header>
