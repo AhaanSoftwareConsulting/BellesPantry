@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowUpRightIcon } from "@phosphor-icons/react";
+import { ArrowUpRightIcon, CaretLeftIcon, CaretRightIcon } from "@phosphor-icons/react";
 import home from "../../../../assets/home.png";
 
 const slides = [
@@ -10,7 +10,7 @@ const slides = [
     subtitle:
       "Handcrafted Southern treats and pantry staples made with premium ingredients and a whole lot of heart.",
     buttonText: "EXPLORE COLLECTION",
-    buttonLink: "/shop",
+    buttonLink: "/product",
     image: home,
   },
   {
@@ -20,7 +20,7 @@ const slides = [
     subtitle:
       "Discover thoughtful gourmet gifts and delightful pantry favorites for every special occasion.",
     buttonText: "SHOP OUR GIFTS",
-    buttonLink: "/gifts",
+    buttonLink: "/product",
     image: home,
   },
   {
@@ -30,7 +30,7 @@ const slides = [
     subtitle:
       "Bring everyone together with comforting recipes and delicious favorites made for sharing.",
     buttonText: "EXPLORE RECIPES",
-    buttonLink: "/recipes",
+    buttonLink: "/product",
     image: home,
   },
 ];
@@ -63,7 +63,7 @@ export default function HomeBanner() {
         {/* Left column */}
         <div
           key={activeIndex}
-          className="w-full min-w-0 max-w-[570px] animate-[fadeIn_500ms_ease-in-out] lg:col-span-7"
+          className="w-full min-w-0 max-w-[600px] animate-[fadeIn_500ms_ease-in-out] lg:col-span-8"
         >
           <p className="mb-4 text-[10px] font-medium tracking-wide text-[#302f29] sm:text-sm">
             {activeSlide.smallTitle}
@@ -73,7 +73,7 @@ export default function HomeBanner() {
             {activeSlide.title}
           </h1>
 
-          <p className="mt-2 break-words font-highlight text-[clamp(2rem,5vw,6.2rem)] leading-tight text-[#815c42]">
+          <p className=" break-words font-highlight text-[clamp(2rem,5vw,7rem)] leading-tight text-[#815c42]">
             {activeSlide.scriptTitle}
           </p>
 
@@ -83,7 +83,7 @@ export default function HomeBanner() {
 
           <a
             href={activeSlide.buttonLink}
-            className="group mt-6 inline-flex max-w-fit items-center gap-3 rounded-full bg-[#77895D] py-2 md:py-2.5 pl-4 pr-2.5 font-inter text-[10px] font-medium uppercase text-white  sm:gap-4 sm:pl-5 sm:text-sm transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#5E432D] hover:shadow-[0_10px_24px_rgba(0,0,0,0.25)]"
+            className="group mt-6 inline-flex cursor-pointer  max-w-fit items-center gap-3 rounded-full bg-[#77895D] py-2 md:py-2.5 pl-4 pr-2.5 font-inter text-[10px] font-medium uppercase text-white  sm:gap-4 sm:pl-5 sm:text-sm transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#5E432D] hover:shadow-[0_10px_24px_rgba(0,0,0,0.25)]"
           >
             <span>{activeSlide.buttonText}</span>
 
@@ -98,7 +98,7 @@ export default function HomeBanner() {
         </div>
 
         {/* Right column intentionally empty */}
-        <div aria-hidden="true" className="hidden lg:block lg:col-span-5" />
+        <div aria-hidden="true" className="hidden lg:block lg:col-span-4" />
       </div>
 
       {/* Previous button */}
@@ -106,9 +106,9 @@ export default function HomeBanner() {
         type="button"
         onClick={() => changeSlide(-1)}
         aria-label="Previous slide"
-        className="absolute left-2 top-1/2 z-20 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#22201d] shadow-sm transition-transform hover:scale-105 sm:left-5 lg:left-6"
+        className="absolute left-2 cursor-pointer top-1/2 z-20 flex h-14 w-14 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#22201d] shadow-sm transition-transform hover:scale-105 sm:left-5 lg:left-6"
       >
-        <span className="text-2xl leading-none">‹</span>
+        <CaretLeftIcon size={32} />
       </button>
 
       {/* Next button */}
@@ -116,9 +116,9 @@ export default function HomeBanner() {
         type="button"
         onClick={() => changeSlide(1)}
         aria-label="Next slide"
-        className="absolute right-2 top-1/2 z-20 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#22201d] shadow-sm transition-transform hover:scale-105 sm:right-5 lg:right-6"
+        className="absolute right-2 cursor-pointer top-1/2 z-20 flex h-14 w-14 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#22201d] shadow-sm transition-transform hover:scale-105 sm:right-5 lg:right-6"
       >
-        <span className="text-2xl leading-none">›</span>
+        <CaretRightIcon size={32} />
       </button>
 
       {/* Small fade animation */}
