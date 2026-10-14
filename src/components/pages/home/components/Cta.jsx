@@ -12,7 +12,7 @@ const Cta = () => {
       <div className="mx-auto w-full max-w-[1440px] px-[20px] py-[64px] md:px-[40px] md:py-[90px] xl:px-[70px]">
         <div className="flex flex-col items-center text-center">
           {/* Heading */}
-          <h2 className="font-heading text-[40px] font-semibold leading-[1.1] text-white sm:text-[56px] xl:text-[78px]">
+          <h2 className="font-heading text-[32px] font-semibold leading-[1.1] text-white sm:text-[56px] xl:text-[78px]">
             Ready to Work With Us?
           </h2>
 

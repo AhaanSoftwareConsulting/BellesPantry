@@ -76,7 +76,7 @@ const Aboutus = () => {
             />
 
             {/* Counter box: 190 x 140, overlaps the image's bottom right */}
-            <div className="absolute -bottom-[12px] -right-[12px] flex h-[120px] w-[160px] flex-col justify-center border-l-[6px] border-t-[6px] border-[#ECF0F0] bg-[#77895D] px-[16px] py-[10px] md:h-[140px] md:w-[190px] md:px-[20px] md:py-[12px] xl:-bottom-[16px] xl:-right-[40px]">
+            <div className="absolute -bottom-[12px] -right-[12px] flex h-[120px] w-[160px] flex-col justify-center rounded-[8px] border-l-[6px] border-t-[6px] border-[#ECF0F0] bg-[#77895D] px-[16px] py-[10px] md:h-[140px] md:w-[190px] md:px-[20px] md:py-[12px] xl:-bottom-[16px] xl:-right-[40px]">
               <p className="font-inter text-[44px] font-bold leading-none text-white md:text-[60px]">
                 <CountUp end={10} suffix="+" />
               </p>
