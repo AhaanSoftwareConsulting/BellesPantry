@@ -29,7 +29,7 @@ const features = [
 
 const Whychooseus = () => {
   return (
-    <section className="flex w-full items-center overflow-hidden bg-[#76563B] xl:h-[530px]">
+    <section className="flex w-full items-center overflow-hidden bg-[#76563B] lg:h-[530px]">
       {/* Keyframes for the rotating half circle */}
       <style>{`
         @keyframes whySpin {
@@ -39,14 +39,14 @@ const Whychooseus = () => {
       `}</style>
 
       {/* Container: max 1440px, side padding 70px on desktop */}
-      <div className="mx-auto w-full max-w-[1440px] px-[20px] py-[56px] md:px-[40px] md:py-[70px] xl:px-[70px] xl:py-0">
+      <div className="mx-auto w-full max-w-[1440px] px-[20px] py-[56px] md:px-[40px] md:py-[70px] lg:py-0 xl:px-[70px]">
         {/* Heading */}
-        <h2 className="mb-[40px] text-center font-heading text-[32px] font-semibold uppercase leading-[1.2] text-white md:mb-[50px] md:text-[40px] xl:mb-[60px] xl:text-[45px]">
+        <h2 className="mb-[40px] text-center font-heading text-[32px] font-semibold uppercase leading-[1.2] text-white md:mb-[50px] md:text-[40px] lg:mb-[60px] lg:text-[45px]">
           Why Choose Us
         </h2>
 
         {/* 1 col mobile | 2 cols tablet | 4 cols desktop (70px gap) */}
-        <div className="grid grid-cols-1 gap-x-[40px] gap-y-[44px] md:grid-cols-2 xl:grid-cols-4 xl:gap-x-[70px]">
+        <div className="grid grid-cols-1 gap-x-[40px] gap-y-[44px] md:grid-cols-2 lg:grid-cols-4 lg:gap-x-[30px] xl:gap-x-[70px]">
           {features.map(({ icon, title, text }) => (
             <div
               key={title}
