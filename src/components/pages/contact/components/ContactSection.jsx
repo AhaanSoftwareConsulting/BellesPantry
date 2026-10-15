@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import {
   FacebookLogo,
@@ -10,6 +11,7 @@ import {
 import contactCTA from "../../../../assets/contactCTA.png";
 
 export default function ContactSection() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const {
     register,
     handleSubmit,
@@ -20,7 +22,7 @@ export default function ContactSection() {
   const onSubmit = async (data) => {
     console.log("Contact form data:", data);
 
-    // Connect your API here.
+    setIsSubmitted(true);
     reset();
   };
 
@@ -56,7 +58,7 @@ export default function ContactSection() {
                 <a href="tel:+(337) 555-1234" className="mt-1 text-sm text-[#6C6C73] xl:text-xl">
                   (337) 555-1234</a>
                 <br />
-                
+
               </div>
 
               {/* Email */}
@@ -101,9 +103,9 @@ export default function ContactSection() {
 
             {/* Promotional image with text overlay */}
             <a
-  href="/offers"
-  className="group relative block h-[300px] w-full shrink-0 overflow-hidden  xl:h-[500px]"
->
+              href="/offers"
+              className="group relative block h-[300px] w-full shrink-0 overflow-hidden  xl:h-[500px]"
+            >
               <img
                 src={contactCTA}
                 alt="Discover our special offers"
@@ -126,161 +128,171 @@ export default function ContactSection() {
             <h1 className="font-heading text-2xl lg:text-3xl xl:text-5xl font-semibold leading-relaxed text-black">
               CONTACT US
             </h1>
-
-            <form
-              onSubmit={handleSubmit(onSubmit)}
-              noValidate
-              className="mt-7"
-            >
-              {/* First name + Last name */}
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:gap-8">
-                <div>
-                  <label
-                    htmlFor="firstName"
-                    className="mb-1 block text-base text-black"
-                  >
-                    First Name*
-                  </label>
-                  <input
-                    id="firstName"
-                    type="text"
-                    placeholder="Enter Your First Name"
-                    {...register("firstName", {
-                      required: "First name is required",
-                      pattern: {
-                        value:
-                          /^[A-Za-z\s]+$/,
-                        message: "Only letters are allowed",
-                      },
-                    })}
-                    className="w-full min-w-0 border border-[#EEEECE] bg-white px-[13px] py-[19px] text-base outline-none transition focus:border-[#77895D]"
-                  />
-                  {errors.firstName && (
-                    <p className="mt-1 text-xs text-red-600">
-                      {errors.firstName.message}
-                    </p>
-                  )}
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="lastName"
-                    className="mb-1 block text-base text-black"
-                  >
-                    Last Name*
-                  </label>
-                  <input
-                    id="lastName"
-                    type="text"
-                    placeholder="Enter Your Last Name"
-                    {...register("lastName", {
-                      required: "Last name is required",
-                      pattern: {
-                        value:
-                          /^[A-Za-z\s]+$/,
-                        message: "Only letters are allowed",
-                      },
-                    })}
-                    className="w-full min-w-0 border border-[#EEEECE] bg-white px-[13px] py-[19px] text-base outline-none transition focus:border-[#77895D]"
-                  />
-                  {errors.lastName && (
-                    <p className="mt-1 text-xs text-red-600">
-                      {errors.lastName.message}
-                    </p>
-                  )}
-                </div>
+            {isSubmitted ? (
+              <div className="mt-7 rounded-lg bg-[#F3F6F3] p-8 text-center">
+                <h2 className="font-heading text-2xl font-semibold text-[#77895D]">
+                  Thank You!
+                </h2>
+                <p className="mt-3 text-base text-[#6C6C73]">
+                  Thank you for contacting us. We appreciate your message!
+                </p>
               </div>
+            ) : (
+              <form
+                onSubmit={handleSubmit(onSubmit)}
+                noValidate
+                className="mt-7"
+              >
+                {/* First name + Last name */}
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:gap-8">
+                  <div>
+                    <label
+                      htmlFor="firstName"
+                      className="mb-1 block text-base text-black"
+                    >
+                      First Name*
+                    </label>
+                    <input
+                      id="firstName"
+                      type="text"
+                      placeholder="Enter Your First Name"
+                      {...register("firstName", {
+                        required: "First name is required",
+                        pattern: {
+                          value:
+                            /^[A-Za-z\s]+$/,
+                          message: "Only letters are allowed",
+                        },
+                      })}
+                      className="w-full min-w-0 border border-[#EEEECE] bg-white px-[13px] py-[19px] text-base outline-none transition focus:border-[#77895D]"
+                    />
+                    {errors.firstName && (
+                      <p className="mt-1 text-xs text-red-600">
+                        {errors.firstName.message}
+                      </p>
+                    )}
+                  </div>
 
-              {/* Phone + Email */}
-              <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5">
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="mb-1 block text-base text-black"
-                  >
-                    Phone*
-                  </label>
-                  <input
-                    id="phone"
-                    type="tel"
-                    placeholder="Enter Your phone Number"
-                    {...register("phone", {
-                      required: "Phone number is required",
-                      pattern: {
-                        value: /^[0-9+\-()\s]{7,20}$/,
-                        message: "Enter a valid phone number",
-                      },
-                    })}
-                    className="w-full min-w-0 border border-[#EEEECE] bg-white px-[13px] py-[19px] text-base outline-none transition focus:border-[#77895D]"
-                  />
-                  {errors.phone && (
-                    <p className="mt-1 text-xs text-red-600">
-                      {errors.phone.message}
-                    </p>
-                  )}
+                  <div>
+                    <label
+                      htmlFor="lastName"
+                      className="mb-1 block text-base text-black"
+                    >
+                      Last Name*
+                    </label>
+                    <input
+                      id="lastName"
+                      type="text"
+                      placeholder="Enter Your Last Name"
+                      {...register("lastName", {
+                        required: "Last name is required",
+                        pattern: {
+                          value:
+                            /^[A-Za-z\s]+$/,
+                          message: "Only letters are allowed",
+                        },
+                      })}
+                      className="w-full min-w-0 border border-[#EEEECE] bg-white px-[13px] py-[19px] text-base outline-none transition focus:border-[#77895D]"
+                    />
+                    {errors.lastName && (
+                      <p className="mt-1 text-xs text-red-600">
+                        {errors.lastName.message}
+                      </p>
+                    )}
+                  </div>
                 </div>
 
-                <div>
+                {/* Phone + Email */}
+                <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5">
+                  <div>
+                    <label
+                      htmlFor="phone"
+                      className="mb-1 block text-base text-black"
+                    >
+                      Phone*
+                    </label>
+                    <input
+                      id="phone"
+                      type="tel"
+                      placeholder="Enter Your phone Number"
+                      {...register("phone", {
+                        required: "Phone number is required",
+                        pattern: {
+                          value: /^[0-9+\-()\s]{7,20}$/,
+                          message: "Enter a valid phone number",
+                        },
+                      })}
+                      className="w-full min-w-0 border border-[#EEEECE] bg-white px-[13px] py-[19px] text-base outline-none transition focus:border-[#77895D]"
+                    />
+                    {errors.phone && (
+                      <p className="mt-1 text-xs text-red-600">
+                        {errors.phone.message}
+                      </p>
+                    )}
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="mb-1 block text-base text-black"
+                    >
+                      Email Id*
+                    </label>
+                    <input
+                      id="email"
+                      type="email"
+                      placeholder="Enter Your Email ID"
+                      {...register("email", {
+                        required: "Email is required",
+                        pattern: {
+                          value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                          message: "Enter a valid email address",
+                        },
+                      })}
+                      className="w-full min-w-0 border border-[#EEEECE] bg-white px-[13px] py-[19px] text-base outline-none transition focus:border-[#77895D]"
+                    />
+                    {errors.email && (
+                      <p className="mt-1 text-xs text-red-600">
+                        {errors.email.message}
+                      </p>
+                    )}
+                  </div>
+                </div>
+
+                {/* Message */}
+                <div className="mt-4">
                   <label
-                    htmlFor="email"
+                    htmlFor="message"
                     className="mb-1 block text-base text-black"
                   >
-                    Email Id*
+                    Massage
                   </label>
-                  <input
-                    id="email"
-                    type="email"
-                    placeholder="Enter Your Email ID"
-                    {...register("email", {
-                      required: "Email is required",
-                      pattern: {
-                        value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                        message: "Enter a valid email address",
-                      },
-                    })}
-                    className="w-full min-w-0 border border-[#EEEECE] bg-white px-[13px] py-[19px] text-base outline-none transition focus:border-[#77895D]"
+                  <textarea
+                    id="message"
+                    rows={5}
+                    placeholder="Enter Your Massage"
+                    {...register("message")}
+                    className="w-full resize-y border border-[#EEEECE] bg-white px-[13px] py-[19px] text-base outline-none transition focus:border-[#77895D]"
                   />
-                  {errors.email && (
-                    <p className="mt-1 text-xs text-red-600">
-                      {errors.email.message}
-                    </p>
-                  )}
                 </div>
-              </div>
 
-              {/* Message */}
-              <div className="mt-4">
-                <label
-                  htmlFor="message"
-                  className="mb-1 block text-base text-black"
-                >
-                  Massage
-                </label>
-                <textarea
-                  id="message"
-                  rows={5}
-                  placeholder="Enter Your Massage"
-                  {...register("message")}
-                  className="w-full resize-y border border-[#EEEECE] bg-white px-[13px] py-[19px] text-base outline-none transition focus:border-[#77895D]"
-                />
-              </div>
+                {/* Submit button */}
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="group mt-6 cursor-pointer inline-flex max-w-fit items-center gap-3 rounded-full bg-[#77895D] py-2 xl:py-2.5 pl-4 pr-2.5 font-inter text-xs font-medium uppercase text-white  sm:gap-4 sm:pl-5 xl:text-sm transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#5E432D] hover:shadow-[0_10px_24px_rgba(0,0,0,0.25)] disabled:cursor-not-allowed disabled:opacity-60">
+                  SUBMIT NOW
 
-              {/* Submit button */}
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="group mt-6 cursor-pointer inline-flex max-w-fit items-center gap-3 rounded-full bg-[#77895D] py-2 xl:py-2.5 pl-4 pr-2.5 font-inter text-xs font-medium uppercase text-white  sm:gap-4 sm:pl-5 xl:text-sm transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#5E432D] hover:shadow-[0_10px_24px_rgba(0,0,0,0.25)] disabled:cursor-not-allowed disabled:opacity-60">
-                SUBMIT NOW
-
-                <span className="flex w-6 h-6 xl:h-8 xl:w-8 shrink-0 items-center justify-center rounded-full bg-white text-[#77895D]">
-                  <ArrowUpRightIcon
-                    size={16}
-                    weight="bold"
-                    className="transition-transform duration-300 group-hover:rotate-180"
-                  />
-                </span>
-              </button>
-            </form>
+                  <span className="flex w-6 h-6 xl:h-8 xl:w-8 shrink-0 items-center justify-center rounded-full bg-white text-[#77895D]">
+                    <ArrowUpRightIcon
+                      size={16}
+                      weight="bold"
+                      className="transition-transform duration-300 group-hover:rotate-180"
+                    />
+                  </span>
+                </button>
+              </form>
+            )}
           </div>
         </div>
       </div>
