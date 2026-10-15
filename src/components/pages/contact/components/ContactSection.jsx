@@ -43,7 +43,7 @@ export default function ContactSection() {
                 <p className="font-heading text-sm md:text-xl text-[#DFA974] leading-snug font-bold">
                   Address
                 </p>
-                <a href="https://maps.app.goo.gl/2YoWMyZa3Masos7c9" className="mt-1 text-sm leading-snug text-[#6C6C73] md:text-xl">
+                <a href="https://maps.app.goo.gl/2YoWMyZa3Masos7c9" className="mt-1 text-sm leading-snug text-[#6C6C73] xl:text-xl">
                   BHANDARI CHOWK , GOLE  BAZAR,
                   <br />
                   KHARAGPUR-721301
@@ -55,10 +55,10 @@ export default function ContactSection() {
                 <p className="font-heading text-sm md:text-xl text-[#DFA974] leading-snug font-bold">
                   Phone
                 </p>
-                <a href="tel:+7596996998" className="mt-1 text-sm text-[#6C6C73] md:text-xl">
+                <a href="tel:+7596996998" className="mt-1 text-sm text-[#6C6C73] xl:text-xl">
                   7596996998</a>
                 <br />
-                <a href="tel:+9163208826" className="text-sm text-[#6C6C73] md:text-xl">9163208826</a>
+                <a href="tel:+9163208826" className="text-sm text-[#6C6C73] xl:text-xl">9163208826</a>
               </div>
 
               {/* Email */}
@@ -68,7 +68,7 @@ export default function ContactSection() {
                 </p>
                 <a
                   href="mailto:hotelvinayak111@gmail.com"
-                  className="mt-1 block break-all mt-1 text-sm text-[#6C6C73] md:text-xl"
+                  className="mt-1 block break-all mt-1 text-sm text-[#6C6C73] xl:text-xl"
                 >
                   hotelvinayak111@gmail.com
                 </a>
@@ -81,13 +81,19 @@ export default function ContactSection() {
                 </p>
 
                 <div className="mt-2 flex items-center gap-4 text-[#6E6E73]">
-                  <a href="https://facebook.com/" aria-label="Facebook" className="transition-colors hover:text-[#6C6C73]">
+                  <a href="https://facebook.com/" target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook" className="transition-colors hover:text-[#6C6C73]">
                     <FacebookLogo size={32} />
                   </a>
-                  <a href="https://instagram.com/" aria-label="Instagram" className="transition-colors hover:text-[#6C6C73]">
+                  <a href="https://instagram.com/" target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram" className="transition-colors hover:text-[#6C6C73]">
                     <InstagramLogo size={32} />
                   </a>
-                  <a href="https://linkedin.com/" aria-label="LinkedIn" className="transition-colors hover:text-[#6C6C73]">
+                  <a href="https://linkedin.com/" target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn" className="transition-colors hover:text-[#6C6C73]">
                     <LinkedinLogo size={32} />
                   </a>
 
@@ -119,7 +125,7 @@ export default function ContactSection() {
 
           {/* RIGHT COLUMN: Contact form */}
           <div className="min-w-0 md:pt-1 lg:col-span-7">
-            <h1 className="font-heading text-3xl font-semibold leading-relaxed text-black sm:text-5xl">
+            <h1 className="font-heading text-2xl lg:text-3xl xl:text-5xl font-semibold leading-relaxed text-black">
               CONTACT US
             </h1>
 
@@ -143,6 +149,11 @@ export default function ContactSection() {
                     placeholder="Enter Your First Name"
                     {...register("firstName", {
                       required: "First name is required",
+                      pattern: {
+                        value:
+                          /^[A-Za-z\s]+$/,
+                        message: "Only letters are allowed",
+                      },
                     })}
                     className="w-full min-w-0 border border-[#EEEECE] bg-white px-[13px] py-[19px] text-base outline-none transition focus:border-[#77895D]"
                   />
@@ -166,6 +177,11 @@ export default function ContactSection() {
                     placeholder="Enter Your Last Name"
                     {...register("lastName", {
                       required: "Last name is required",
+                      pattern: {
+                        value:
+                          /^[A-Za-z\s]+$/,
+                        message: "Only letters are allowed",
+                      },
                     })}
                     className="w-full min-w-0 border border-[#EEEECE] bg-white px-[13px] py-[19px] text-base outline-none transition focus:border-[#77895D]"
                   />
@@ -255,10 +271,10 @@ export default function ContactSection() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="group mt-6 inline-flex max-w-fit items-center gap-3 rounded-full bg-[#77895D] py-2 md:py-2.5 pl-4 pr-2.5 font-inter text-[10px] font-medium uppercase text-white  sm:gap-4 sm:pl-5 sm:text-sm transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#5E432D] hover:shadow-[0_10px_24px_rgba(0,0,0,0.25)] disabled:cursor-not-allowed disabled:opacity-60">
+                className="group mt-6 inline-flex max-w-fit items-center gap-3 rounded-full bg-[#77895D] py-2 xl:py-2.5 pl-4 pr-2.5 font-inter text-xs font-medium uppercase text-white  sm:gap-4 sm:pl-5 xl:text-sm transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#5E432D] hover:shadow-[0_10px_24px_rgba(0,0,0,0.25)] disabled:cursor-not-allowed disabled:opacity-60">
                 SUBMIT NOW
 
-                <span className="flex w-6 h-6 md:h-8 md:w-8 shrink-0 items-center justify-center rounded-full bg-white text-[#77895D]">
+                <span className="flex w-6 h-6 xl:h-8 xl:w-8 shrink-0 items-center justify-center rounded-full bg-white text-[#77895D]">
                   <ArrowUpRightIcon
                     size={16}
                     weight="bold"

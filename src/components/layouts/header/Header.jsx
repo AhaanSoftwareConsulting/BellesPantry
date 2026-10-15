@@ -79,10 +79,10 @@ const isActive = (href) => pathname === href;
             
             <a
               href="/contact"
-              className="group inline-flex ms-5 xl:ms-[90px]  items-center gap-2 rounded-full bg-[#77895D] pl-2.5 py-2 pr-2 text-base text-white transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#5E432D] hover:shadow-[0_10px_24px_rgba(0,0,0,0.25)]"
+              className="group inline-flex ms-5 xl:ms-[90px]  items-center gap-2 rounded-full bg-[#77895D] pl-2.5 py-2 pr-2 text-sm text-white transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#5E432D] hover:shadow-[0_10px_24px_rgba(0,0,0,0.25)]"
             >
               GET IN TOUCH
-              <span className="flex w-6 h-6 md:h-8 md:w-8  items-center justify-center rounded-full bg-white text-lg leading-none text-[#77895D]">
+              <span className="flex w-6 h-6   items-center justify-center rounded-full bg-white text-lg leading-none text-[#77895D]">
                 <ArrowUpRightIcon size={16} weight="bold"
                   className="transition-transform duration-300 group-hover:rotate-180"/>
               </span>

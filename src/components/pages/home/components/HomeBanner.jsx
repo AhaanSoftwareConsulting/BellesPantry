@@ -83,11 +83,11 @@ export default function HomeBanner() {
 
           <a
             href={activeSlide.buttonLink}
-            className="group mt-6 inline-flex cursor-pointer  max-w-fit items-center gap-3 rounded-full bg-[#77895D] py-2 lg:py-2.5 pl-4 pr-2.5 font-inter text-xs font-medium uppercase text-white  sm:gap-4 sm:pl-5 lg:text-sm transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#5E432D] hover:shadow-[0_10px_24px_rgba(0,0,0,0.25)]"
+            className="group mt-6 inline-flex cursor-pointer  max-w-fit items-center gap-3 rounded-full bg-[#77895D] py-2 xl:py-2.5 pl-4 pr-2.5 font-inter text-xs font-medium uppercase text-white  sm:gap-4 sm:pl-5 xl:text-sm transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#5E432D] hover:shadow-[0_10px_24px_rgba(0,0,0,0.25)]"
           >
             <span>{activeSlide.buttonText}</span>
 
-            <span className="flex w-6 h-6 lg:h-8 lg:w-8 shrink-0 items-center justify-center rounded-full bg-white text-[#77895D]">
+            <span className="flex w-6 h-6 xl:h-8 xl:w-8 shrink-0 items-center justify-center rounded-full bg-white text-[#77895D]">
               <ArrowUpRightIcon
                 size={16}
                 weight="bold"
