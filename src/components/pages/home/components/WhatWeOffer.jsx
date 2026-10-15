@@ -61,7 +61,7 @@ export default function WhatWeOffer() {
               </a>
 
               {/* Description */}
-              <p className="mt-3 min-h-[52px] max-w-[390px] text-[13px] leading-[1.65] text-[#171717] xl:text-[17px] ">
+              <p className="mt-3 min-h-[52px] max-w-[390px] text-base sm:text-[13px] leading-[1.65] text-[#171717] xl:text-[17px] ">
                 {offer.description}
               </p>
 
