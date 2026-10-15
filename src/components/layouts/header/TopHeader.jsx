@@ -1,41 +1,56 @@
-import React from 'react'
-import {FacebookLogoIcon, InstagramLogoIcon, LinkedinLogoIcon} from "@phosphor-icons/react";
+import React from 'react';
+import {
+  FacebookLogoIcon,
+  InstagramLogoIcon,
+  LinkedinLogoIcon,
+} from '@phosphor-icons/react';
+
 const TopHeader = () => {
-
   return (
-    <div className="relative flex min-h-11 items-center justify-between md:justify-center bg-[#76563B] px-4 text-white">
+    <div className="bg-[#76563B] text-white">
+      <div className="relative mx-auto flex min-h-11 w-full max-w-[1440px] items-center justify-between lg:justify-center px-5 sm:px-8 lg:px-12 xl:px-[70px]">
 
-      {/* Center announcement */}
-       <p className="text-start md:text-center text-[8px] md:text-sm"> SOUTHERN FLAVOR. THOUGHTFUL GIFTS. MADE WITH LOVE.</p>
-      {/* Right social icons */}
-      <div className="absolute right-4 top-1/2 flex -translate-y-1/2 items-center gap-1 sm:right-8 ">
-       <a
-          href="https://facebook.com" target="_blank"  rel="noopener noreferrer"
-          aria-label="Facebook"
-          className="bg-white rounded-full p-1 text-black transition-colors duration-300 hover:scale-105"
-        >
-          <FacebookLogoIcon size={16} strokeWidth={1.7} weight="fill" color="#292821"/>
-        </a>
+        {/* Center announcement */}
+        <p className="text-center text-[8px] sm:text-xs lg:text-sm">
+          SOUTHERN FLAVOR. THOUGHTFUL GIFTS. MADE WITH LOVE.
+        </p>
 
-        <a
-          href="https://instagram.com" target="_blank"  rel="noopener noreferrer"
-          aria-label="Instagram"
-          className="bg-white rounded-full p-1 text-black transition-colors duration-300 hover:scale-105"
-        >
-          <InstagramLogoIcon size={16} strokeWidth={1.7} color="#292821"/>
-        </a>
+        {/* Right social icons */}
+        <div className="absolute right-4 top-1/2 flex -translate-y-1/2 items-center gap-1 xl:right-[70px]">
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            className="rounded-full bg-white p-1 text-black transition-transform duration-300 hover:scale-105"
+          >
+            <FacebookLogoIcon size={16} weight="fill" color="#292821" />
+          </a>
 
-        <a
-          href="https://linkedin.com" target="_blank"  rel="noopener noreferrer"
-          aria-label="YouTube"
-          className="bg-white rounded-full p-1 text-black transition-colors duration-300 hover:scale-105"
-        >
-          <LinkedinLogoIcon size={17} strokeWidth={1.7} weight="fill" color="#292821"/>
-        </a>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            className="rounded-full bg-white p-1 text-black transition-transform duration-300 hover:scale-105"
+          >
+            <InstagramLogoIcon size={16} color="#292821" />
+          </a>
+
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="rounded-full bg-white p-1 text-black transition-transform duration-300 hover:scale-105"
+          >
+            <LinkedinLogoIcon size={17} weight="fill" color="#292821" />
+          </a>
+        </div>
+
       </div>
-
     </div>
   );
-}
+};
 
-export default TopHeader
+export default TopHeader;
