@@ -4,7 +4,7 @@ import OurStoryImg from "../../../../assets/cta1.png";
 const OurStory = () => {
     return (
         <section className="overflow-hidden bg-white">
-            <div className="relative mx-auto  max-w-[1440px] px-8 lg:px-12 xl:pl-[43px] xl:pr-[71px] lg:py-20 ">
+            <div className="relative mx-auto  max-w-[1440px] px-5 py-12 sm:px-8 sm:py-14  xl:pl-[43px] xl:pr-[71px] lg:py-20 ">
                 {/* Image and overlapping card wrapper */}
                 <div className="relative mx-auto w-full max-w-[1299px]">
 
@@ -18,13 +18,14 @@ const OurStory = () => {
 </div>
 
                     {/* Green overlapping card */}
-                    <div className="relative z-10   bg-[#77895D] px-10 py-10 text-white  md:absolute  md:top-[45%] md:ml-0 md:mt-0 md:w-[62%] md:-translate-y-1/2 xl:px-[75px] xl:py-[52px] ">
+                    <div className="relative z-10   bg-[#77895D] p-5 lg:p-12  text-white  md:absolute  -translate-y-1/3 mx-4 top-[35%]  md:ml-0 md:mt-0 md:w-[62%] lg:-translate-y-1/3 xl:px-[75px] xl:py-[52px] ">
+                    
 
                         <p className="mb-2 text-[10px] font-medium uppercase tracking-wide text-white/90 sm:text-xs">
                             OUR STORY
                         </p>
 
-                        <h2 className="w-full font-heading text-2xl font-semibold leading-tight sm:text-3xl lg:text-4xl xl:text-[50px]">
+                        <h2 className="w-full font-heading text-2xl font-semibold leading-tight lg:text-3xl lg:text-4xl xl:text-[50px]">
                             Where Southern Tradition Meets Thoughtful Craft
                         </h2>
 
@@ -37,11 +38,11 @@ const OurStory = () => {
 
                         <a
                             href="/about"
-                            className="group mt-6 inline-flex max-w-fit items-center gap-3 rounded-full bg-[#76563B] py-2 md:py-2.5 pl-4 pr-2.5 font-inter text-[10px] font-medium uppercase text-white  sm:gap-4 sm:pl-5 sm:text-sm transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#5E432D] hover:shadow-[0_10px_24px_rgba(0,0,0,0.25)]"
+                            className="group mt-6 inline-flex max-w-fit items-center gap-3 rounded-full bg-[#76563B] py-2 lg:py-2.5 pl-4 pr-2.5 font-inter text-xs font-medium uppercase text-white  sm:gap-4 sm:pl-5 lg:text-sm transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#5E432D] hover:shadow-[0_10px_24px_rgba(0,0,0,0.25)]"
                         >
                             <span>LEARN MORE ABOUT US</span>
 
-                            <span className="flex w-6 h-6 md:h-8 md:w-8 shrink-0 items-center justify-center rounded-full bg-white text-[#76563B]">
+                            <span className="flex w-6 h-6 lg:h-8 lg:w-8 shrink-0 items-center justify-center rounded-full bg-white text-[#76563B]">
                                 <ArrowUpRightIcon
                                     size={16}
                                     weight="bold"

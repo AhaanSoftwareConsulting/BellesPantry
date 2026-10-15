@@ -166,10 +166,10 @@ const isActive = (href) => pathname === href;
           href="/contact"
           onClick={closeMenu}
           tabIndex={menuOpen ? 0 : -1}
-          className="mt-7 group mt-6 inline-flex w-fit items-center gap-3 rounded-full bg-[#77895D] py-2 md:py-2.5 pl-4 pr-2.5 font-inter text-[10px] font-medium uppercase text-white transition-colors duration-300 hover:bg-[#5E432D] sm:gap-4 sm:pl-5 sm:text-sm"
+          className="mt-7 group mt-6 inline-flex w-fit items-center gap-3 rounded-full bg-[#77895D] py-2  pl-4 pr-2.5 font-inter text-xs font-medium uppercase text-white transition-colors duration-300 hover:bg-[#5E432D] "
         >
           GET IN TOUCH
-          <span className="flex w-6 h-6 md:h-8 md:w-8 shrink-0 items-center justify-center rounded-full bg-white text-[#77895D]">
+          <span className="flex w-6 h-6 shrink-0 items-center justify-center rounded-full bg-white text-[#77895D]">
             <ArrowUpRightIcon
                             size={16}
                             weight="bold"

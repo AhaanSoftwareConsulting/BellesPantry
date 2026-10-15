@@ -10,7 +10,7 @@ const TopHeader = () => {
       {/* Right social icons */}
       <div className="absolute right-4 top-1/2 flex -translate-y-1/2 items-center gap-1 sm:right-8 ">
        <a
-          href="https://facebook.com"
+          href="https://facebook.com" target="_blank"  rel="noopener noreferrer"
           aria-label="Facebook"
           className="bg-white rounded-full p-1 text-black transition-colors duration-300 hover:scale-105"
         >
@@ -18,7 +18,7 @@ const TopHeader = () => {
         </a>
 
         <a
-          href="https://instagram.com"
+          href="https://instagram.com" target="_blank"  rel="noopener noreferrer"
           aria-label="Instagram"
           className="bg-white rounded-full p-1 text-black transition-colors duration-300 hover:scale-105"
         >
@@ -26,7 +26,7 @@ const TopHeader = () => {
         </a>
 
         <a
-          href="https://linkedin.com"
+          href="https://linkedin.com" target="_blank"  rel="noopener noreferrer"
           aria-label="YouTube"
           className="bg-white rounded-full p-1 text-black transition-colors duration-300 hover:scale-105"
         >
