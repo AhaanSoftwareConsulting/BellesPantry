@@ -43,10 +43,8 @@ export default function ContactSection() {
                 <p className="font-heading text-sm md:text-xl text-[#DFA974] leading-snug font-bold">
                   Address
                 </p>
-                <a href="https://maps.app.goo.gl/2YoWMyZa3Masos7c9" className="mt-1 text-sm leading-snug text-[#6C6C73] xl:text-xl">
-                  BHANDARI CHOWK , GOLE  BAZAR,
-                  <br />
-                  KHARAGPUR-721301
+                <a href="https://maps.app.goo.gl/kYmksCR2yje1w8rG7" className="mt-1 text-sm leading-snug text-[#6C6C73] xl:text-xl">
+                  Lafayette, Louisiana
                 </a>
               </div>
 
@@ -55,10 +53,10 @@ export default function ContactSection() {
                 <p className="font-heading text-sm md:text-xl text-[#DFA974] leading-snug font-bold">
                   Phone
                 </p>
-                <a href="tel:+7596996998" className="mt-1 text-sm text-[#6C6C73] xl:text-xl">
-                  7596996998</a>
+                <a href="tel:+(337) 555-1234" className="mt-1 text-sm text-[#6C6C73] xl:text-xl">
+                  (337) 555-1234</a>
                 <br />
-                <a href="tel:+9163208826" className="text-sm text-[#6C6C73] xl:text-xl">9163208826</a>
+                
               </div>
 
               {/* Email */}
@@ -67,10 +65,10 @@ export default function ContactSection() {
                   Email
                 </p>
                 <a
-                  href="mailto:hotelvinayak111@gmail.com"
+                  href="mailto:hello@bellespantry.com"
                   className="mt-1 block break-all mt-1 text-sm text-[#6C6C73] xl:text-xl"
                 >
-                  hotelvinayak111@gmail.com
+                  hello@bellespantry.com
                 </a>
               </div>
 
@@ -103,13 +101,13 @@ export default function ContactSection() {
 
             {/* Promotional image with text overlay */}
             <a
-              href="/offers"
-              className="group relative block min-h-[250px] w-full flex-1 overflow-hidden"
-            >
+  href="/offers"
+  className="group relative block h-[300px] w-full shrink-0 overflow-hidden  xl:h-[500px]"
+>
               <img
                 src={contactCTA}
                 alt="Discover our special offers"
-                className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                className="absolute inset-0 h-full w-full object-cover object-top xl:object-center transition-transform duration-500 group-hover:scale-105"
               />
 
               <div className="absolute inset-0 flex items-center justify-center p-6 text-center">
@@ -271,7 +269,7 @@ export default function ContactSection() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="group mt-6 inline-flex max-w-fit items-center gap-3 rounded-full bg-[#77895D] py-2 xl:py-2.5 pl-4 pr-2.5 font-inter text-xs font-medium uppercase text-white  sm:gap-4 sm:pl-5 xl:text-sm transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#5E432D] hover:shadow-[0_10px_24px_rgba(0,0,0,0.25)] disabled:cursor-not-allowed disabled:opacity-60">
+                className="group mt-6 cursor-pointer inline-flex max-w-fit items-center gap-3 rounded-full bg-[#77895D] py-2 xl:py-2.5 pl-4 pr-2.5 font-inter text-xs font-medium uppercase text-white  sm:gap-4 sm:pl-5 xl:text-sm transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#5E432D] hover:shadow-[0_10px_24px_rgba(0,0,0,0.25)] disabled:cursor-not-allowed disabled:opacity-60">
                 SUBMIT NOW
 
                 <span className="flex w-6 h-6 xl:h-8 xl:w-8 shrink-0 items-center justify-center rounded-full bg-white text-[#77895D]">
@@ -287,14 +285,10 @@ export default function ContactSection() {
         </div>
       </div>
       <div className="w-full overflow-hidden">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.343780491807!2d87.31407707503396!3d22.340644541432393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1d45c31dbec89f%3A0xfa38573d4c3b2d98!2sGole%20Bazar%20Bhandari%20Chok!5e0!3m2!1sen!2sin!4v1791965067017!5m2!1sen!2sin"
-          title="Find us at Gole Bazar, Bhandari Chowk"
-          className="h-[300px] w-full border-0 sm:h-[350px] lg:h-[450px]"
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110335.20093223757!2d-92.12196012948635!3d30.209260140865677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86249c4364c5d89b%3A0xc94a752492f7ff13!2sLafayette%2C%20LA%2C%20USA!5e0!3m2!1sen!2sin!4v1792067235422!5m2!1sen!2sin" className="h-[300px] w-full border-0 sm:h-[350px] lg:h-[450px]"
           allowFullScreen
           loading="lazy"
-          referrerPolicy="strict-origin-when-cross-origin"
-        />
+          referrerPolicy="strict-origin-when-cross-origin"></iframe>
       </div>
     </section>
   );
