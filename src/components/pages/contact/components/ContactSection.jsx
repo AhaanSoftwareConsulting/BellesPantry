@@ -104,7 +104,7 @@ export default function ContactSection() {
             {/* Promotional image with text overlay */}
             <a
               href="/offers"
-              className="group relative block h-[300px] w-full shrink-0 overflow-hidden  xl:h-[500px]"
+              className="group relative block h-[300px] w-full shrink-0 overflow-hidden"
             >
               <img
                 src={contactCTA}
