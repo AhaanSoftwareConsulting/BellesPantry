@@ -48,9 +48,9 @@ const exploreLinks = [
 /* Social icons (Phosphor). Color is inherited from the link (currentColor),
    so the hover colors keep working. */
 const socials = [
-  { name: "Facebook", href: "#", Icon: FacebookLogoIcon, weight: "fill" },
-  { name: "Instagram", href: "#", Icon: InstagramLogoIcon, weight: "bold" },
-  { name: "LinkedIn", href: "#", Icon: LinkedinLogoIcon, weight: "fill" },
+  { name: "Facebook", href: "https://www.facebook.com/", Icon: FacebookLogoIcon, weight: "fill" },
+  { name: "Instagram", href: "https://www.instagram.com/", Icon: InstagramLogoIcon, weight: "bold" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/", Icon: LinkedinLogoIcon, weight: "fill" },
 ];
 
 /* Shared horizontal padding: 20px mobile, 40px tablet, 70px desktop */
@@ -219,6 +219,7 @@ const Footer = () => {
             <a
               key={name}
               href={href}
+              target="_blank"
               aria-label={name}
               className="flex h-[30px] w-[30px] items-center justify-center rounded-full bg-white text-[#292821] transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#77895D] hover:text-white"
             >
