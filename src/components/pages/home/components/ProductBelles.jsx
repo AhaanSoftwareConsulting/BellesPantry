@@ -241,8 +241,8 @@ export default function ProductBelles() {
                     >
                       {/* Product image */}
                       <a
-                        href={product.permalink}
-                        className="block overflow-hidden rounded-md bg-[#f2f2f0]"
+                        onClick={() => setSelectedProduct(product)}
+                        className="block overflow-hidden cursor-pointer  rounded-md bg-[#f2f2f0]"
                         aria-label={`View ${product.name}`}
                       >
                         <div className="aspect-square w-full">
@@ -257,13 +257,13 @@ export default function ProductBelles() {
 
                       {/* Product information */}
                       <div className="pt-6 px-4 xl:px-8  items-center">
-                        <a
-                          href={product.permalink}
+                        <p
+                          
                           title={product.name}
-                          className="block truncate font-heading text-lg xl:text-[26px] text-black hover:text-[#7A8B62]"
+                          className="block truncate font-heading text-lg xl:text-[26px] text-black"
                         >
                           {product.name}
-                        </a>
+                        </p>
 
                         {/* Five rating stars */}
                         <div
