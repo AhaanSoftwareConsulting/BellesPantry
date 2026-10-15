@@ -36,12 +36,12 @@ export default function WhatWeOffer() {
       <div className="mx-auto max-w-[1440px]">
 
         {/* Section title */}
-        <h2 className="mb-8 text-center font-heading text-3xl font-semibold uppercase leading-tight tracking-wide text-[#77895D] sm:mb-10 lg:text-5xl">
+        <h2 className="mb-8 text-center font-heading text-2xl md:text-3xl xl:text-5xl font-semibold uppercase leading-tight tracking-wide text-[#77895D] sm:mb-10 ">
           What We Offer
         </h2>
 
         {/* Three-column grid */}
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:grid-cols-3 lg:gap-[30px]">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 lg:gap-[30px]">
           {offers.map((offer) => (
             <div
               key={offer.buttonText}
@@ -61,18 +61,18 @@ export default function WhatWeOffer() {
               </a>
 
               {/* Description */}
-              <p className="mt-3 min-h-[52px] max-w-[390px] text-base leading-[1.65] text-[#171717] sm:text-[17px] ">
+              <p className="mt-3 min-h-[52px] max-w-[390px] text-[13px] leading-[1.65] text-[#171717] xl:text-[17px] ">
                 {offer.description}
               </p>
 
               {/* Button */}
               <a
                 href={offer.link}
-                className="group mt-6 inline-flex max-w-fit items-center gap-3 rounded-full bg-[#77895D] py-2 md:py-2.5 pl-4 pr-2.5 font-inter text-[10px] font-medium uppercase text-white  sm:gap-4 sm:pl-5 sm:text-sm transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#5E432D] hover:shadow-[0_10px_24px_rgba(0,0,0,0.25)] cursor-pointer"
+                className="group mt-6 inline-flex max-w-fit items-center gap-3 rounded-full bg-[#77895D] py-2 lg:py-2.5 pl-4 pr-2.5 font-inter text-xs font-medium uppercase text-white  sm:gap-4 sm:pl-5 lg:text-sm transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#5E432D] hover:shadow-[0_10px_24px_rgba(0,0,0,0.25)] cursor-pointer"
               >
                 {offer.buttonText}
 
-                <span className="flex w-6 h-6 md:h-8 md:w-8 shrink-0 items-center justify-center rounded-full bg-white text-[#77895D]">
+                <span className="flex w-6 h-6 lg:h-8 lg:w-8 shrink-0 items-center justify-center rounded-full bg-white text-[#77895D]">
                             <ArrowUpRightIcon
                               size={16}
                              weight="bold"

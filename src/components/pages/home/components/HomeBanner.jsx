@@ -83,11 +83,11 @@ export default function HomeBanner() {
 
           <a
             href={activeSlide.buttonLink}
-            className="group mt-6 inline-flex cursor-pointer  max-w-fit items-center gap-3 rounded-full bg-[#77895D] py-2 md:py-2.5 pl-4 pr-2.5 font-inter text-[10px] font-medium uppercase text-white  sm:gap-4 sm:pl-5 sm:text-sm transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#5E432D] hover:shadow-[0_10px_24px_rgba(0,0,0,0.25)]"
+            className="group mt-6 inline-flex cursor-pointer  max-w-fit items-center gap-3 rounded-full bg-[#77895D] py-2 lg:py-2.5 pl-4 pr-2.5 font-inter text-xs font-medium uppercase text-white  sm:gap-4 sm:pl-5 lg:text-sm transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#5E432D] hover:shadow-[0_10px_24px_rgba(0,0,0,0.25)]"
           >
             <span>{activeSlide.buttonText}</span>
 
-            <span className="flex w-6 h-6 md:h-8 md:w-8 shrink-0 items-center justify-center rounded-full bg-white text-[#77895D]">
+            <span className="flex w-6 h-6 lg:h-8 lg:w-8 shrink-0 items-center justify-center rounded-full bg-white text-[#77895D]">
               <ArrowUpRightIcon
                 size={16}
                 weight="bold"
@@ -106,9 +106,9 @@ export default function HomeBanner() {
         type="button"
         onClick={() => changeSlide(-1)}
         aria-label="Previous slide"
-        className="absolute left-2 cursor-pointer top-1/2 z-20 flex h-14 w-14 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#22201d] shadow-sm transition-transform hover:scale-105 sm:left-5 lg:left-6"
+        className="absolute left-2 cursor-pointer top-1/2 z-20 flex w-8 h-8 xl:h-14 xl:w-14 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#22201d] shadow-sm transition-transform hover:scale-105 sm:left-5 lg:left-6"
       >
-        <CaretLeftIcon size={32} />
+        <CaretLeftIcon size={20} />
       </button>
 
       {/* Next button */}
@@ -116,9 +116,9 @@ export default function HomeBanner() {
         type="button"
         onClick={() => changeSlide(1)}
         aria-label="Next slide"
-        className="absolute right-2 cursor-pointer top-1/2 z-20 flex h-14 w-14 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#22201d] shadow-sm transition-transform hover:scale-105 sm:right-5 lg:right-6"
+        className="absolute right-2 cursor-pointer top-1/2 z-20 flex w-8 h-8 xl:h-14 xl:w-14 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#22201d] shadow-sm transition-transform hover:scale-105 sm:right-5 lg:right-6"
       >
-        <CaretRightIcon size={32} />
+        <CaretRightIcon size={20} />
       </button>
 
       {/* Small fade animation */}

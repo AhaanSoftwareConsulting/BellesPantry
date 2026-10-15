@@ -166,7 +166,7 @@ export default function ProductBelles() {
     <section className="w-full bg-white relative mx-auto max-w-[1440px] ">
       <div className="px-5 py-12 sm:px-8 lg:px-12 xl:px-[70px] xl:py-20">
         {/* Section title */}
-        <h2 className="mb-14 text-center font-heading text-2xl font-semibold uppercase tracking-wide text-[#77895D] sm:text-[50px]">
+        <h2 className="mb-14 text-center font-heading text-2xl md:text-3xl xl:text-5xl font-semibold uppercase tracking-wide text-[#77895D] ">
           Discover Belle&apos;s
         </h2>
 
@@ -199,9 +199,9 @@ export default function ProductBelles() {
                 type="button"
                 onClick={previousSlide}
                 aria-label="Previous products"
-                className="absolute -left-4 cursor-pointer top-[48%] z-20 flex h-16 w-16 translate-y-1/3 items-center justify-center rounded-full border border-gray-200 bg-white text-2xl leading-none text-black shadow-sm transition hover:bg-[#f5f5f0]"
+                className="absolute -left-4 cursor-pointer top-[48%] z-20 flex w-8 h-8 xl:h-14 xl:w-14 translate-y-1/3 items-center justify-center rounded-full border border-gray-200 bg-white text-2xl leading-none text-black shadow-sm transition hover:bg-[#f5f5f0]"
               >
-                <CaretLeftIcon size={32} />
+                <CaretLeftIcon size={20} />
               </button>
             )}
 
@@ -293,10 +293,10 @@ export default function ProductBelles() {
                         <button
                           type="button"
                           onClick={() => setSelectedProduct(product)}
-                          className="group mt-6 inline-flex  cursor-pointer  max-w-fit items-center gap-3 rounded-full bg-[#77895D] py-2 md:py-2.5 pl-4 pr-2.5 font-inter text-[10px] font-medium uppercase text-white  sm:gap-4 sm:pl-5 sm:text-sm transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#5E432D] hover:shadow-[0_10px_24px_rgba(0,0,0,0.25)]"
+                          className="group mt-6 inline-flex  cursor-pointer  max-w-fit items-center gap-3 rounded-full bg-[#77895D] py-2 lg:py-2.5 pl-4 pr-2.5 font-inter text-xs font-medium uppercase text-white  sm:gap-4 sm:pl-5 lg:text-sm transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#5E432D] hover:shadow-[0_10px_24px_rgba(0,0,0,0.25)]"
                         >
                           Quick View
-                          <span className="flex w-6 h-6 md:h-8 md:w-8 shrink-0 items-center justify-center rounded-full bg-white text-[#77895D]">
+                          <span className="flex w-6 h-6 lg:h-8 lg:w-8 shrink-0 items-center justify-center rounded-full bg-white text-[#77895D]">
                                         <ArrowUpRightIcon
                                           size={16}
                                           weight="bold"
@@ -317,9 +317,9 @@ export default function ProductBelles() {
                 type="button"
                 onClick={nextSlide}
                 aria-label="Next products"
-                className="absolute -right-4 cursor-pointer top-[48%] z-20 flex h-16 w-16 translate-y-1/3 items-center justify-center rounded-full border border-gray-200 bg-white text-2xl leading-none text-black shadow-sm transition hover:bg-[#f5f5f0] "
+                className="absolute -right-4 cursor-pointer top-[48%] z-20 flex w-8 h-8 xl:h-14 xl:w-14 translate-y-1/3 items-center justify-center rounded-full border border-gray-200 bg-white text-2xl leading-none text-black shadow-sm transition hover:bg-[#f5f5f0] "
               >
-                <CaretRightIcon size={32} />
+                <CaretRightIcon size={20} />
               </button>
             )}
           </div>
