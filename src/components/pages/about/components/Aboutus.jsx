@@ -102,7 +102,7 @@ const Aboutus = () => {
             </p>
 
             {/* Heading */}
-            <h2 className="mt-[8px] break-words font-heading text-[30px] font-semibold uppercase leading-[1.2] text-black md:text-[40px] xl:text-[50px]">
+            <h2 className="mt-[8px] break-words font-heading text-[30px] font-semibold uppercase leading-[1.2] text-black md:text-[40px] xl:text-[length:clamp(36px,calc(9.2vw_-_80px),50px)]">
               Rooted in Southern Tradition
             </h2>
 
