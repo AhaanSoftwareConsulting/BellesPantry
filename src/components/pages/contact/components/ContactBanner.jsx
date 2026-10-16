@@ -14,7 +14,7 @@ const ContactBanner = () => {
       {/* Container: max 1440px, side padding 70px on desktop */}
       <div className="relative z-10 mx-auto w-full max-w-[1440px] px-[20px] pb-[48px] pt-[130px] md:px-[40px] md:pb-[64px] xl:px-[70px] xl:pb-[80px] xl:pt-[150px]">
         {/* Heading */}
-        <h1 className="max-w-full break-words font-heading text-[36px] font-semibold uppercase leading-[1.15] text-white sm:text-[48px] md:text-[60px] xl:text-[80px]">
+        <h1 className="max-w-full break-words font-heading text-[36px] font-semibold leading-[1.15] text-white sm:text-[48px] md:text-[60px] xl:text-[80px]">
           Lets Contact
         </h1>
 
